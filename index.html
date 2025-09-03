@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Support</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        a.button { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            background: #007bff; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+        }
+        a.button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Need Help? We’re Here for You</h1>
+    <p>Your experience matters to us, and we’re committed to helping you as quickly as possible. Please reach out to us anytime at:</p>
+    
+    <p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linguikispanish@gmail.com&su=App%20Support&body=Describe%20your%20issue%20here" target="_blank" class="button">
+            Contact Support
+        </a>
+    </p>
+    
+    <p>Or <a href="#" id="showEmail">click here to see our email</a>.</p>
+    
+    <p id="email" style="display:none;">
+        Email: <a href="mailto:linguikispanish@gmail.com">linguikispanish@gmail.com</a>
+    </p>
+
+    <p>To assist you better, kindly include the following in your message:</p>
+    <ul>
+        <li>A clear description of the issue or question.</li>
+        <li>Your device model and operating system version, if possible</li>
+        <li>Screenshots or screen recordings, if possible.</li>
+    </ul>
+    
+    <p>Our team will review your request and get back to you as soon as possible with personalized assistance. Thank you for trusting us—we’re here to support you every step of the way.</p>
+
+    <script>
+        const showEmailLink = document.getElementById('showEmail');
+        const emailParagraph = document.getElementById('email');
+
+        showEmailLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            emailParagraph.style.display = 'block';
+            showEmailLink.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
